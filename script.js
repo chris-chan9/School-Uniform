@@ -7,14 +7,14 @@ var CURRENCY = "$";   // change to "₱" or any symbol you like
 
 // ---------- 1. Starting data (used the first time the page opens) ----------
 var DEFAULT_PRODUCTS = [
-  { id: 1, name: "Polo Shirt",       price: 12, sizes: ["S", "M", "L", "XL"], stock: 30 },
-  { id: 2, name: "School Pants",     price: 18, sizes: ["S", "M", "L", "XL"], stock: 25 },
-  { id: 3, name: "School Skirt",     price: 16, sizes: ["S", "M", "L"],       stock: 20 },
-  { id: 4, name: "PE T-Shirt",       price: 10, sizes: ["S", "M", "L", "XL"], stock: 40 },
-  { id: 5, name: "PE Jogging Pants", price: 14, sizes: ["S", "M", "L", "XL"], stock: 35 },
-  { id: 6, name: "School Necktie",   price: 5,  sizes: ["One Size"],          stock: 50 }
+ const uniforms = [
+  { id: 1, name: "School Uniform",   price: 12, sizes: ["S", "M", "L", "XL"],       stock: 30 },
+  { id: 2, name: "School Pants",     price: 18, sizes: ["S", "M", "L", "XL"],       stock: 25 },
+  { id: 3, name: "PE T-Shirt",       price: 10, sizes: ["S", "M", "L", "XL"],       stock: 40 },
+  { id: 4, name: "PE Jogging Pants", price: 14, sizes: ["S", "M", "L", "XL"],       stock: 35 },
+  { id: 5, name: "School Shoes",     price: 25, sizes: ["36", "37", "38", "39", "40", "41", "42"], stock: 20 },
+  { id: 6, name: "ID Lace",          price: 3,  sizes: ["One Size"],                 stock: 50 }
 ];
-
 // ---------- 2. localStorage helpers ----------
 function loadData(key, fallback) {
   try {
