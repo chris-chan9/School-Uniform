@@ -1,0 +1,16 @@
+*{box-sizing:border-box}body{margin:0;font:15px/1.5 Arial,sans-serif;background:#e8f0fc;color:#1c2536}
+header{background:#1e4fa3;color:#fff;padding:14px;text-align:center}header h1{margin:0 0 10px;font-size:1.4rem}
+nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}nav a{color:#fff;text-decoration:none;border:2px solid #fff;padding:6px 14px;border-radius:6px}nav a:hover,nav a.on{background:#fff;color:#1e4fa3}
+main{max-width:1000px;margin:20px auto;padding:0 14px}h2{color:#1e4fa3;margin-top:0}footer{text-align:center;color:#6b7280;padding:20px}
+.panel{background:#fff;border-radius:10px;padding:16px;margin-bottom:16px;box-shadow:0 2px 8px rgba(0,0,0,.08)}.narrow{max-width:380px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:16px}
+.card{background:#fff;border-left:6px solid #1e4fa3;border-radius:8px;padding:16px}.card span{display:block;color:#6b7280}.card b{font-size:1.8rem;color:#1e4fa3}
+label{display:block;font-weight:bold;margin-bottom:12px}input,select{display:block;width:100%;margin-top:4px;padding:10px;border:1px solid #b8c2d6;border-radius:6px;font:inherit}
+.total{background:#e8f0fc;padding:10px;border-radius:6px;font-size:1.1rem}
+.btn{display:inline-block;background:#1e4fa3;color:#fff;border:0;padding:10px 18px;border-radius:6px;font:inherit;cursor:pointer;text-decoration:none}
+.btn.gray{background:#6b7280}.btn.red{background:#d63939}.btn.sm{padding:4px 10px;font-size:.85rem}
+.msg{padding:10px 14px;border-radius:6px;margin-bottom:12px}.msg.ok{background:#d3f9d8;color:#1b5e20}.msg.error{background:#ffe3e3;color:#a61e1e}
+.tw{overflow-x:auto}table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:8px;border-bottom:1px solid #dde3ee;white-space:nowrap}th{background:#1e4fa3;color:#fff}
+.act,.inline{display:flex;gap:6px;align-items:center;margin:0}.act form{margin:0}.inline input{width:90px;margin:0;padding:5px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}.filters input{max-width:340px;margin:0}
+.tag{padding:2px 10px;border-radius:99px;font-size:.85rem;color:#fff}.tag.red{background:#d63939}.tag.orange,.tag.Pending{background:#e8890c}.tag.Processing{background:#1e4fa3}.tag.Completed{background:#2f9e44}
