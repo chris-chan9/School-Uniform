@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>School Uniform Ordering System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER + NAVIGATION -->
+  <header>
+    <h1>🎽 School Uniform Ordering System</h1>
+    <nav>
+      <button data-page="home" class="active">Home</button>
+      <button data-page="products">Uniform Products</button>
+      <button data-page="order">Place an Order</button>
+      <button data-page="orders">Order List</button>
+    </nav>
+  </header>
+
+  <!-- Success / error messages appear here -->
+  <div id="message" role="alert"></div>
+
+  <main>
+
+    <!-- HOME + DASHBOARD -->
+    <section id="home" class="page">
+      <h2>Welcome!</h2>
+      <p>Order your school uniform online. Choose a uniform, pick your size, and place your order.</p>
+      <div class="cards">
+        <div class="card"><span>Total Orders</span><strong id="totalOrders">0</strong></div>
+        <div class="card"><span>Total Sales</span><strong id="totalSales">0</strong></div>
+        <div class="card"><span>Available Uniforms</span><strong id="totalStock">0</strong></div>
+        <div class="card"><span>Pending Orders</span><strong id="pendingOrders">0</strong></div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products" class="page hidden">
+      <h2>Uniform Products</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Uniform</th><th>Sizes</th><th>Price</th><th>Available</th></tr></thead>
+          <tbody id="productTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ORDER FORM (also used for editing) -->
+    <section id="order" class="page hidden">
+      <h2 id="formTitle">Place an Order</h2>
+      <form id="orderForm" novalidate>
+        <div class="field">
+          <label for="studentName">Student Name</label>
+          <input type="text" id="studentName" placeholder="e.g. Maria Santos">
+          <small class="error" id="studentNameError"></small>
+        </div>
+        <div class="field">
+          <label for="studentId">Student ID</label>
+          <input type="text" id="studentId" placeholder="e.g. 2026-001">
+          <small class="error" id="studentIdError"></small>
+        </div>
+        <div class="field">
+          <label for="product">Uniform Type</label>
+          <select id="product"></select>
+          <small class="error" id="productError"></small>
+        </div>
+        <div class="field">
+          <label for="size">Size</label>
+          <select id="size"></select>
+          <small class="error" id="sizeError"></small>
+        </div>
+        <div class="field">
+          <label for="quantity">Quantity</label>
+          <input type="number" id="quantity" min="1" step="1" value="1">
+          <small class="error" id="quantityError"></small>
+        </div>
+        <div class="field">
+          <label for="status">Order Status</label>
+          <select id="status">
+            <option>Pending</option>
+            <option>Processing</option>
+            <option>Completed</option>
+          </select>
+        </div>
+        <p class="total-box">Total Price: <strong id="totalPrice">0.00</strong></p>
+        <button type="submit" class="btn" id="submitBtn">Place Order</button>
+        <button type="button" class="btn gray hidden" id="cancelEdit">Cancel Edit</button>
+      </form>
+    </section>
+
+    <!-- ORDER LIST -->
+    <section id="orders" class="page hidden">
+      <h2>Order List</h2>
+      <input type="search" id="searchBox" placeholder="Search by student name or ID...">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Order #</th><th>Date</th><th>Student</th><th>Student ID</th><th>Uniform</th>
+                <th>Size</th><th>Qty</th><th>Total</th><th>Status</th><th>Actions</th></tr>
+          </thead>
+          <tbody id="orderTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>School Uniform Ordering System &mdash; Beginner Project</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
